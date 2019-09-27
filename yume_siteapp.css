@@ -1,0 +1,140 @@
+/*
++----------------------------------------------
+|  _     _____ _ _ ____    _   _ _____ _____ 
+| | |   |  ___/ / |___ \  | \ | | ____|_   _|
+| | |   | |_  | | | __) | |  \| |  _|   | |  
+| | |___|  _| | | |/ __/ _| |\  | |___  | |  
+| |_____|_|   |_|_|_____(_)_| \_|_____| |_|  
+|
+| Do you say now or never Or never too late?
++----------------------------------------------
+| Modified By LF112 [https://www.lf112.net] 
+| on Mar 16th 2019, Presented to @yume_umia
+| Please DO NOT Remove Any Of The Copyright Information.Ribbon
+|
+| Author: LF112
+| ⚡GitHub: [https://github.com/LF112/Yume] ,
+|   Released Under MIT Lisence
++----------------------------------------------
+*/
+
+@charset "UTF-8";
+*,
+body,
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: 0 0;
+    word-wrap: break-word;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: Titillium Web, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, sans-serif
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #F2F2F2;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.yume_lf_item {
+    margin-bottom: 10px;
+    margin-top: 4px;
+    box-shadow: 0 1px 3px rgba(26, 26, 26, .1);
+    background: linear-gradient(to right, rgba(49, 49, 49, 0.5), rgba(72, 72, 72, 0.6), rgba(84, 84, 84, 0.6), rgba(60, 60, 60, 0.6));
+    border-radius: 5px;
+    transition: all .5s ease;
+    display: inline-flex;
+}
+
+.yume_lf_item>div {
+    min-height: 103px;
+    min-width: 260px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.yume_lf_item>div .Ribbon {
+    position: absolute;
+    top: 0;
+}
+
+body {
+    position: relative;
+    background: #efefef;
+    background-size: cover;
+}
+
+main {
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+main .Container {
+    position: relative;
+    height: calc(100vh);
+    background-size: cover;
+    background-position: 50%;
+    overflow: initial;
+}
+
+main .Container:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-size: cover;
+    /*background-image: url(Background.png);*/
+}
+
+main .Container>div {
+    width: 100%;
+}
+
+main .Container>div .Main_wrapper {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+}
+
+main .Container>div .Main_wrapper {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+}
+
+.Main_wrapper .IsYume {
+    position: relative;
+    width: 85%;
+    height: calc(100vh);
+    display: flex;
+    align-items: center;
+    float: left;
+}
+
+.Main_wrapper .Placeholder {
+    position: relative;
+    width: 15%;
+    float: left;
+}
+
+.IsYume>div {
+    width: 100%;
+    position: relative;
+}
