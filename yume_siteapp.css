@@ -75,6 +75,7 @@ body {
     position: relative;
     background: #efefef;
     background-size: cover;
+    background-image: url(Background.png);
 }
 
 main {
@@ -99,8 +100,9 @@ main .Container:before {
     bottom: 0;
     right: 0;
     z-index: -1;
+    background-image: url(Background.png);
     background-size: cover;
-    /*background-image: url(Background.png);*/
+    filter: blur(3px);
 }
 
 main .Container>div {
@@ -121,7 +123,7 @@ main .Container>div .Main_wrapper {
 
 .Main_wrapper .IsYume {
     position: relative;
-    width: 85%;
+    width: 68%;
     height: calc(100vh);
     display: flex;
     align-items: center;
@@ -130,11 +132,398 @@ main .Container>div .Main_wrapper {
 
 .Main_wrapper .Placeholder {
     position: relative;
-    width: 15%;
+    width: 32%;
     float: left;
 }
 
-.IsYume>div {
+.Main_wrapper .Ribbon {
+    background: linear-gradient(to right, hsla(7, 43%, 65%, 0.8), rgba(246, 237, 222, 0.8), rgba(44, 223, 230, 0.8), rgba(255, 245, 220, 0.8));
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.IsYume .Main {
     width: 100%;
+    height: 210px;
+    background: linear-gradient(240deg, rgba(247, 245, 241, 0.3), rgba(255, 245, 220, 0.3) 100%);
     position: relative;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+}
+
+.IsYume .Main:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    right: -110px;
+    top: 0;
+    border-bottom: 105px solid rgba(247, 245, 241, 0.3);
+    border-left: 55px solid rgba(247, 245, 241, 0.3);
+    border-right: 55px solid transparent;
+    border-top: 105px solid transparent;
+}
+
+.IsYume .Rush {
+    position: absolute;
+    right: 20%;
+    min-width: 45px;
+    height: calc(100vh);
+    z-index: -1;
+}
+
+.IsYume .Rush>div {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-27.6deg);
+}
+
+.IsYume .Rush>div .Rua {
+    position: absolute;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+}
+
+.IsYume .Rush>div .Rua>div {
+    position: absolute;
+    width: 16px;
+    height: 100px;
+    margin-top: -135px;
+    border-radius: 0 3px 0 3px;
+    background: linear-gradient(240deg, rgba(247, 245, 241), rgba(255, 245, 220) 100%);
+}
+
+.IsYume .Rush>div .Rua>div::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    top: -9px;
+    border-bottom: 5px solid rgb(248, 245, 238);
+    border-left: 8px solid rgb(248, 245, 238);
+    border-right: 8px solid transparent;
+    border-top: 5px solid transparent;
+}
+
+.IsYume .Rush>div .Rua>div::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    bottom: -9px;
+    border-bottom: 5px solid rgb(254, 245, 225);
+    border-left: 8px solid rgb(255, 245, 222);
+    border-right: 8px solid transparent;
+    border-top: 5px solid transparent;
+    transform: rotate(180deg);
+}
+
+.IsYume .Rush>div .line {
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(240deg, transparent, rgba(255, 245, 220, 0.6), rgba(255, 245, 220, 0.6), rgba(255, 245, 220, 0.6), rgba(255, 245, 220, 0.6), transparent);
+    z-index: -10;
+}
+
+.IsYume .Profile {
+    margin-left: 45px;
+    padding-right: 40px;
+    display: flex;
+    /* align-items: center; */
+    border-right: 1px solid rgba(195, 195, 195, 0.18);
+}
+
+.IsYume .Profile .Pic {
+    position: relative;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid hsla(0, 0%, 52%, 0.4);
+}
+
+.IsYume .Profile .Pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 6s ease-out, -webkit-transform 6s ease-out;
+}
+
+.IsYume .Profile .Rish {
+    position: relative;
+    text-align: center;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.IsYume .Profile .Rish>div {
+    position: relative;
+}
+
+.IsYume .Profile .Rish .Name {
+    font-size: 2em;
+    margin-top: 2px;
+    padding: 0 25px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.IsYume .Profile .Rish .Sign {
+    font-size: 12px;
+    margin-top: 2px;
+    font-weight: lighter;
+    line-height: 1;
+    color: rgba(195, 195, 195, 0.9);
+}
+
+.IsYume .Social_link {
+    width: 100%;
+    height: 155px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.IsYume .Social_link>div {
+    text-align: center;
+    padding-left: 30px;
+}
+
+.IsYume .Social_link a {
+    display: inline-flex;
+    padding: 2px 8px 2px 4px;
+    cursor: pointer;
+    /* border-right: 2px solid rgba(255, 255, 255, 0.25); */
+}
+
+.IsYume .Social_link a:hover {
+    border-radius: 2px;
+    background: rgba(253, 245, 228, 0.3);
+}
+
+.IsYume .Social_link a>svg {
+    width: 28px;
+    height: 28px;
+}
+
+.IsYume .Social_link a>p {
+    color: #fdfdfd;
+    line-height: 28px;
+    padding-left: 2px;
+    font-size: 16px;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+footer .Foo_main {
+    height: 32px;
+    position: relative;
+    margin-top: -4px;
+    padding-left: 20px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+footer .Foo_main .Secondary {
+    display: flex;
+    position: relative;
+}
+
+footer .Foo_main .Ribbon {
+    position: absolute;
+    height: 3px;
+    background: linear-gradient(to right, rgba(119, 119, 119, 0.2), rgba(72, 72, 72, 0.2), rgba(103, 103, 103, 0.2), rgba(60, 60, 60, 0.2));
+}
+
+footer .Foo_main .Secondary>p,
+a,
+span {
+    line-height: 28px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.19);
+    font-weight: lighter;
+}
+
+footer .Foo_main .Secondary>p .LF {
+    font-family: fontOne;
+    color: rgba(255, 255, 255, 0.26);
+    font-weight: bold;
+}
+
+footer .Foo_main .Nbsp {
+    padding: 0 8px;
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 780px) {
+    main .Container {
+        height: 100%;
+    }
+    main .Container>div .Main_wrapper {
+        display: grid;
+    }
+    main .Container>div {
+        padding: 0 10px;
+        /* margin-top: 40px; */
+    }
+    .Main_wrapper .IsYume {
+        width: 100%;
+        margin: auto;
+        padding: 0 5px 0 5px;
+        margin-bottom: 25px;
+    }
+    .IsYume .Rush {
+        display: none
+    }
+    .IsYume .Main {
+        display: inline-grid;
+        height: auto;
+        width: 100%;
+        padding: 15px 25px;
+        border-radius: 4px;
+        background: unset;
+    }
+    .IsYume .Profile {
+        display: inline-grid;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        padding-right: 0;
+        padding-bottom: 20px;
+        border-right: unset;
+        border-bottom: 1px solid rgba(195, 195, 195, 0.18);
+    }
+    .IsYume .Main:after {
+        display: none;
+    }
+    .IsYume .Profile .Rish {
+        margin-left: unset;
+        display: unset;
+    }
+    .IsYume .Social_link {
+        height: 100px;
+    }
+    footer {
+        position: relative;
+        display: inline-grid;
+    }
+    footer .Foo_main .Secondary {
+        display: inline-grid;
+        width: 100%;
+        text-align: center;
+    }
+    footer .Foo_main .Nbsp {
+        display: none;
+    }
+    footer .Foo_main {
+        padding-left: 0;
+        padding: 0 10%;
+        height: 60px;
+    }
+    footer .Foo_main .Ribbon {
+        background: linear-gradient(to right, rgba(119, 119, 119, 0.8), rgba(72, 72, 72, 0.8), rgba(103, 103, 103, 0.8), rgba(60, 60, 60, 0.8));
+    }
+}
+
+.Tip::after {
+    background: rgba(79, 89, 95, 0.4);
+    border-radius: 2px;
+    bottom: 100%;
+    color: rgba(195, 195, 195, 0.9);
+    content: attr(data-tooltip);
+    display: block;
+    font-size: .7rem;
+    left: 50%;
+    max-width: 320px;
+    opacity: 0;
+    overflow: hidden;
+    font-weight: lighter;
+    padding: 2px 5px;
+    line-height: 20px;
+    pointer-events: none;
+    position: absolute;
+    text-overflow: ellipsis;
+    transform: translate(-50%, .4rem);
+    transition: opacity .2s, transform .2s;
+    white-space: pre;
+    z-index: 300;
+}
+
+.Tip:focus::after,
+.Tip:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -.2rem)
+}
+
+.Ribbon {
+    width: 100%;
+    height: 3px;
+}
+
+::-webkit-scrollbar {
+    background: rgba(0, 0, 0, .05);
+    width: 6px;
+    height: 6px;
+    -webkit-appearance: none;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-button,
+ ::-webkit-scrollbar-corner,
+ ::-webkit-scrollbar-track,
+ ::-webkit-scrollbar-track-piece {
+    background: transparent;
+    display: none;
+}
+
+::-webkit-scrollbar-button,
+ ::-webkit-scrollbar-corner,
+ ::-webkit-scrollbar-track,
+ ::-webkit-scrollbar-track-piece {
+    background: transparent;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 4px;
+    height: 4px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+::-webkit-scrollbar-button,
+ ::-webkit-scrollbar-corner,
+ ::-webkit-scrollbar-track,
+ ::-webkit-scrollbar-track-piece {
+    background: transparent;
+    display: none;
+}
+
+::-webkit-scrollbar-button,
+ ::-webkit-scrollbar-corner,
+ ::-webkit-scrollbar-track,
+ ::-webkit-scrollbar-track-piece {
+    background: transparent;
+    display: none;
+}
+
+::selection {
+    background: #b2b8c1;
+    color: #0bf;
 }
